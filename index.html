@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Avansis</title>
+
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="JS/script.js"></script>
+
+<!-- Fuente Roboto-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<!-- Fuente Major-->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+<!-- Iconos-->
+
+<script src="https://kit.fontawesome.com/77fb0cbc75.js" crossorigin="anonymous"></script>
+
+<!-- Precarga Img Background-->
+<link rel="preload" as="image" href="Media/Heroimage.jpeg">
+<link rel="preload" as="image" href="Media/heroimg2.jpeg">
+<link rel="preload" as="image" href="Media/heroimg3.jpeg">
+
+
+</head>
+
+<body>
+
+	<div id="modalIni">
+		<div id="modalBoxIni"> 
+
+			<h1>Siempre estamos, cuando los problemas encuentran la SOLUCIÓN.</h1>
+			<button onclick="cerrarModalIni()">Empieza</button>
+		</div>
+	</div>
+
+
+	<header id="encabezado">
+
+		<div class="fondosHero" id="fondoHero1"> </div>
+		<div class="fondosHero" id="fondoHero2"> </div>
+		<div class="fondosHero" id="fondoHero3"> </div>
+		
+		<nav id="navScroll">
+			<ul id="menu">
+				
+				<li class="elementoMenu"> <a href="#encabezado">Inicio</a></li>
+				<li class="elementoMenu"> <a href="#nosotros">Sobre Nosotros</a></li>
+				<li class="elementoMenu"> <a href="#galeria">Galeria</a></li>
+				<li class="elementoMenu"> <a href="#retribucion">Retribución</a> 
+
+					<ul id="submenu">
+						<li class="elementoSubmenu"><a href="https://www.up-spain.com/cheque-gourmet/" target="_blank">Tarjeta Restaurante</a></li>
+						<li class="elementoSubmenu"><a href="https://www.up-spain.com/bienestar/" target="_blank">Seguro Médico</a></li>
+						<li class="elementoSubmenu"><a href="https://www.up-spain.com/cheque-transporte/" target="_blank">Abono Transporte</a></li>
+						<li class="elementoSubmenu"><a href="https://www.up-spain.com/cheque-guarderia/" target="_blank">Cheque Guadería</a></li>
+					</ul>
+
+				</li>
+				<li class="elementoMenu"> <a href="#video">Video</a></li>
+				<li class="elementoMenu"> <a href="#contacto">Contacto</a></li>
+
+			</ul>
+		</nav>
+
+		<h1 id="tituloEncabezado">AvAnsis</h1>
+		<h2 id="subtituloEncabezado">Dedicación plena a la excelencia e innovación</h2>
+
+	</header>
+
+
+	<section id="nosotros">
+		
+		<h2 class="tituloSeccion">Sobre Nosotros</h2>
+
+		<div id="contenedorNosotros">
+			
+			<div class="colNosotros">
+				<img src="Media/nosotros1.jpg" id="imagenNosotros"></img>
+			</div>
+
+			<div class="colNosotros">
+				<p>Cu nam labores lobortis definiebas, ei aliquyam salutatus persequeris quo, cum eu nemore fierent dissentiunt. Per vero dolor id, vide democritum scribentur eu vim, pri erroribus temporibus ex. Euismod molestie offendit has no. Quo te semper invidunt quaestio, per vituperatoribus sadipscing ei, partem aliquyam sensibus in cum.</p>
+
+			</div>
+	
+	</section>
+
+
+	<section id="galeria">
+		
+		<h2 class="tituloSeccion" onclick="modalGaleria()">GALERÍA</h2>
+
+	<div id="menuGaleria">
+		<p id="tabFrases" class="elementoGaleria pestanaActiva" onclick="marcarPestana('Frases', 'tabFrases')"> Frases </p>
+		<p id="tabEventos" class="elementoGaleria" onclick="marcarPestana('Eventos','tabEventos')"> Eventos </p>
+		<p id="tabDestaques" class="elementoGaleria" onclick="marcarPestana('Destaques','tabDestaques')">Destaques</p>
+	</div> 
+
+		<div class="contenedorGaleria" id="Frases">
+			
+			<div class="fotos">
+				<img src="Media/img1.jpeg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/img2.jpeg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/img3.jpeg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/img4.jpeg">
+			</div>
+
+		</div>
+
+
+
+		<div class="contenedorGaleria" id="Eventos">
+			
+			<div class="fotos">
+				<img src="Media/evento1.jpg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/evento2.jpg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/evento3.jpg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/evento4.jpg">
+			</div>
+
+		</div>
+
+
+
+		<div class="contenedorGaleria" id="Destaques">
+			
+			<div class="fotos">
+				<img src="Media/destaque1.jpeg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/destaque2.jpeg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/destaque3.jpeg">
+			</div>
+
+			<div class="fotos">
+				<img src="Media/destaque4.jpeg">
+			</div>
+
+		</div>
+
+<!--
+	<div id="modalGaleria">
+		<div id="showGaleria"> 
+
+		</div>
+
+		<button class="boxButton boxButtonRight"> <i class="fad fa-angle-right"></i> </button>
+		<button class="boxButton boxButtonLeft"> <i class="fad fa-angle-left"></i> </button>
+	</div>
+-->
+
+	</section>
+
+
+
+	<section id="retribucion">
+		
+		<div id="contenedorPestanas">
+
+		<div id="tituloRetribucion">
+		<h2 class="tituloSeccionEspecial">Retribución Flexible</h2>
+		</div>
+
+		<div id="imagenesRetribucion">
+
+		<div class="imagen">
+			<div class="imagenRedonda">
+				<img id="imgEspecial" src="Media/restaurante1.jpg" alt="">
+			</div>
+			<p class="nombreImagen"><a href="https://www.up-spain.com/cheque-gourmet/" target="_blank">Tarjeta Restaurante</a></p>
+		</div>
+
+		<div class="imagen">
+			<div class="imagenRedonda">
+				<img id="imgEspecial" src="Media/seguro1.jpg" alt="">
+			</div>
+			<p class="nombreImagen"><a href="https://www.up-spain.com/bienestar/" target="_blank">Seguro Médico</a></p>
+		</div>
+
+		<div class="imagen">
+			<div class="imagenRedonda">
+				<img id="imgEspecial" src="Media/transporte1.jpg" alt="">
+			</div>
+			<p class="nombreImagen"><a href="https://www.up-spain.com/cheque-transporte/" target="_blank">Abono Transporte</a></p>
+		</div>
+
+		<div class="imagen">
+			<div class="imagenRedonda">
+				<img id="imgEspecial" src="Media/guarderia1.jpg" alt="">
+			</div>
+			<p class="nombreImagen"><a href="https://www.up-spain.com/cheque-guarderia/" target="_blank">Cheque Guardería</a></p>
+		</div>
+
+	    </div>
+		</div>
+
+	</section>
+
+
+	<section id="video">
+		
+		<h2 class="tituloPorque">¿Por qué AVANSIS?</h2>
+
+		<div id="contenedorVideo">
+			
+			<div class="colVideo">
+				<video src="Media/avansis.mp4" controls poster="Media/imgvideo.jpg" id="videoAvansis"></video> 
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id="contacto">
+		
+		<h2 class="tituloContacto">CONTACTO</h2>
+
+		<div id="contenedorContacto">
+			
+			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.74282142842!2d-3.8366333848366176!3d40.39239217936797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418bccdf53bd79%3A0xb487be45a9fcd1ef!2sAvansis%20-%20Consultora%20IT%2C%20BPO%20y%20soluciones%20Inform%C3%A1ticas!5e0!3m2!1ses!2ses!4v1617552147726!5m2!1ses!2ses" width="600" height="525" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+			<form action="" id="formulario">
+				
+				<p id="textoReservas">Solicitar información:</p>
+
+				<input id="formNombre" type="text" name="Nombre" placeholder="Nombre y Apellidos" required >
+
+				<input id="formCorreo" type="email" name="Correo" placeholder="Correo" required >
+
+				<input id="formNumero" type="number" name="Numero" placeholder="Número de teléfono"required >
+
+				<input id="botonEnviar" onclick="modalContacto()" value="Enviar">
+
+			</form>
+
+		</div>
+
+	<div id="modalContacto">
+		<div id="modalBoxCont"> 
+
+			<h1>Ya está.</h1>
+			<p id="mensajeContacto">mensaje</p>
+			<button onclick="cerrarModalContacto()">OK</button>
+		</div>
+
+	</div>
+
+	</section>
+
+	<footer id="pie">
+		<i class="fab fa-facebook-f" id="icono"></i>
+		<i class="fab fa-instagram" id="icono"></i>
+		<i class="fab fa-twitter" id="icono"></i>
+
+	</footer>
+ 
+
+
+	<script>
+		setInterval(heroSlishow,3000);
+
+		setInterval(heroSlideanim,3000);
+
+		modalIni();
+	</script>
+
+
+</body>
+</html>
